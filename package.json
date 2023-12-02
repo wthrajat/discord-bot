@@ -1,0 +1,37 @@
+{
+    "name": "y",
+    "version": "1.0.0",
+    "description": "Bitshala discord bot",
+    "main": "src/index.js",
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.+(js|jsx)": "eslint --fix",
+        "*.+(json|css|md)": "prettier --write"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "commandkit": "^0.1.6",
+        "discord.js": "^14.14.1",
+        "dotenv": "^16.3.1",
+        "mongoose": "^8.0.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.55.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.1",
+        "husky": "^8.0.3",
+        "lint-staged": "^15.1.0",
+        "prettier": "^3.1.0"
+    }
+}
